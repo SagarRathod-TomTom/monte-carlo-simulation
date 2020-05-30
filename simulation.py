@@ -46,9 +46,10 @@ class MonteCarloSimulation:
 
         table_df = pd.DataFrame(data, columns=["Prize", "Candidate", "Host", "Switch No", "Switch Yes", "Result"])
         print(table_df)
+        table_df.to_csv(f"{self.number_of_doors}_doors_{self.n_samples}_samples.csv", index=False)
         print(table_df['Result'].value_counts(normalize=True))
      
  
- if __name__ == "__main__":
+if __name__ == "__main__":
     MonteCarloSimulation(3, 100).simulate()
      
