@@ -1,5 +1,7 @@
 import pandas as pd
 import random
+import argparse
+
 
 class MonteCarloSimulation:
     """
@@ -51,5 +53,10 @@ class MonteCarloSimulation:
      
  
 if __name__ == "__main__":
-    MonteCarloSimulation(3, 100).simulate()
-     
+
+    parser = argparse.ArgumentParser(description="MonteCarloSimulation")
+    parser.add_argument("--doors", type=int, default=3, help="Number of doors")
+    parser.add_argument("--samples", type=int, default=100, help="Number of samples")
+    args = parser.parse_args()
+    MonteCarloSimulation(args.doors, args.samples).simulate()
+
