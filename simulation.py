@@ -7,12 +7,12 @@ class MonteCarloSimulation:
     """
     Monte Carlo Simulation of Monty Hall Problem
     
-    You stand in front of the N number of doors.
+    You stand in front of N number of doors.
     Behind one of those doors is a brand new car that you can win. 
     Behind other rest of the doors is a goat.
     
-    First, you randomly choose the one door and,
-    host open the rest of doors which must contain a goat.
+    First, you randomly choose the one door and
+    host open the rest of doors which must contain a goat and not a prize.
     
     Host gives you second a chance to decide or switch the door.
     At the end prize is revealed.
